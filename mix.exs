@@ -14,8 +14,8 @@ defmodule StreamHash.Mixfile do
       deps: deps(),
       # Docs
       name: "StreamHash",
-      source_url: "https://github.com/ne_sachirou/stream_hash",
-      homepage_url: "https://github.com/ne_sachirou/stream_hash",
+      source_url: "https://github.com/ne-sachirou/stream_hash",
+      homepage_url: "https://github.com/ne-sachirou/stream_hash",
       docs: [
         main: "StreamHash",
         extras: ["README.md"],
