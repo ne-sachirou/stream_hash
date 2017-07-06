@@ -32,12 +32,13 @@ defmodule StreamHash.Mixfile do
       {:credo, "~> 0.7", only: [:dev, :test]},
       {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
+      {:inch_ex, "~> 0.5", only: [:dev, :test], runtime: false},
     ]
   end
 
   defp aliases do
     [
-      "lint": ["credo --strict", "dialyzer --halt-exit-status"],
+      "lint": ["credo --strict", "inch", "dialyzer --halt-exit-status"],
     ]
   end
 

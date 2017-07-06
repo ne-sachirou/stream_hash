@@ -1,5 +1,6 @@
 defmodule StreamHashTest do
   use ExUnit.Case, async: true
+
   doctest StreamHash
 
   describe "hash/2" do
