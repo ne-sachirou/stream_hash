@@ -29,16 +29,14 @@ defmodule StreamHash.Mixfile do
 
   defp deps do
     [
-      {:credo, "~> 0.7", only: [:dev, :test]},
-      {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
-      {:inch_ex, "~> 0.5", only: [:dev, :test], runtime: false},
+      {:inner_cotton, github: "ne-sachirou/inner_cotton", only: [:dev, :test], runtime: false},
     ]
   end
 
   defp aliases do
     [
-      "lint": ["credo --strict", "inch", "dialyzer --halt-exit-status"],
+      "lint": ["cotton.lint"],
     ]
   end
 
