@@ -8,7 +8,7 @@ defmodule StreamHashTest do
       @tag algorithm: algorithm
       test "#{algorithm}", %{algorithm: algorithm} do
         hash = :crypto.hash algorithm, "xyzxyz\n"
-        assert [hash] == "test/fixture/xyzxyz.txt" |> File.stream! |> StreamHash.hash(algorithm) |> Enum.to_list
+        assert hash == "test/fixture/xyzxyz.txt" |> File.stream! |> StreamHash.hash(algorithm) |> Enum.into("")
       end
     end
   end
