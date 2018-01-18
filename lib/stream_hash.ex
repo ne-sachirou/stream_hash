@@ -14,7 +14,7 @@ defmodule StreamHash do
       iex> ["xyz"] |> Stream.cycle |> Stream.take(2) |> StreamHash.hash(:sha256) |> Enum.into("")
       <<39, 48, 232, 165, 240, 181, 53, 170, 235, 10, 6, 92, 81, 0, 80, 44, 98, 156, 191, 32, 80, 240, 113, 154, 64, 73, 230, 192, 127, 22, 146, 205>>
   """
-  @spec hash(Enumerable.t, hash_algorithms) :: Enumerable.t
+  @spec hash(Enumerable.t(), hash_algorithms) :: Enumerable.t()
   def hash(enum, algorithm) do
     transform_with_final(
       enum,
@@ -24,20 +24,18 @@ defmodule StreamHash do
     )
   end
 
-  @spec transform_with_final(Enumerable.t, acc, fun, final_fun) :: Enumerable.t when
-  fun: (Stream.element, acc -> {Enumerable.t, acc} | {:halt, acc}),
-  final_fun: (acc -> {Enumerable.t, acc} | {:halt, acc}),
-  acc: any
+  @spec transform_with_final(Enumerable.t(), acc, fun, final_fun) :: Enumerable.t()
+        when fun: (Stream.element(), acc -> {Enumerable.t(), acc} | {:halt, acc}),
+             final_fun: (acc -> {Enumerable.t(), acc} | {:halt, acc}),
+             acc: any
   defp transform_with_final(enum, acc, reducer, final_fun) do
     ref = make_ref()
+
     enum
     |> Stream.concat([ref])
-    |> Stream.transform(
-      acc,
-      fn
-        ^ref, acc -> final_fun.(acc)
-        element, acc -> reducer.(element, acc)
-      end
-    )
+    |> Stream.transform(acc, fn
+      ^ref, acc -> final_fun.(acc)
+      element, acc -> reducer.(element, acc)
+    end)
   end
 end

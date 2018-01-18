@@ -5,9 +5,9 @@ defmodule StreamHash.Mixfile do
     [
       app: :stream_hash,
       version: "0.1.0",
-      elixir: "~> 1.4",
-      build_embedded: Mix.env == :prod,
-      start_permanent: Mix.env == :prod,
+      elixir: "~> 1.5",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
       description: "Stream into md4, md5, ripemd160, sha, sha224, sha256, sha384, sha512 hash.",
       package: package(),
       aliases: aliases(),
@@ -18,8 +18,8 @@ defmodule StreamHash.Mixfile do
       homepage_url: "https://github.com/ne-sachirou/stream_hash",
       docs: [
         main: "StreamHash",
-        extras: ["README.md"],
-      ],
+        extras: ["README.md"]
+      ]
     ]
   end
 
@@ -30,13 +30,13 @@ defmodule StreamHash.Mixfile do
   defp deps do
     [
       {:ex_doc, "~> 0.18", only: :dev, runtime: false},
-      {:inner_cotton, github: "ne-sachirou/inner_cotton", only: [:dev, :test]},
+      {:inner_cotton, github: "ne-sachirou/inner_cotton", only: [:dev, :test]}
     ]
   end
 
   defp aliases do
     [
-      "lint": ["cotton.lint"],
+      lint: ["cotton.lint"]
     ]
   end
 
@@ -46,7 +46,7 @@ defmodule StreamHash.Mixfile do
       name: :stream_hash,
       maintainers: ["ne_Sachirou <utakata.c4se@gmail.com>"],
       links: %{
-        "GitHub": "https://github.com/ne-sachirou/stream_hash",
+        GitHub: "https://github.com/ne-sachirou/stream_hash"
       },
       files: ["LICENSE", "README.md", "mix.exs", "lib"]
     ]
