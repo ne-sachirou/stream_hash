@@ -1,9 +1,9 @@
 defmodule StreamHash do
   @moduledoc """
-  Stream into md4, md5, ripemd160, sha, sha224, sha256, sha384, sha512 hash.
+  Stream into md5, ripemd160, sha, sha224, sha256, sha384, sha512 hash.
   """
 
-  @type hash_algorithms :: :md4 | :md5 | :ripemd160 | :sha | :sha224 | :sha256 | :sha384 | :sha512
+  @type hash_algorithms :: :md5 | :ripemd160 | :sha | :sha224 | :sha256 | :sha384 | :sha512
 
   @doc """
   Stream into hash.

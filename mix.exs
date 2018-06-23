@@ -1,31 +1,31 @@
 defmodule StreamHash.Mixfile do
   use Mix.Project
 
+  @github "https://github.com/ne-sachirou/stream_hash"
+
   def project do
     [
       app: :stream_hash,
-      version: "0.1.0",
-      elixir: "~> 1.5",
       build_embedded: Mix.env() == :prod,
-      start_permanent: Mix.env() == :prod,
-      description: "Stream into md4, md5, ripemd160, sha, sha224, sha256, sha384, sha512 hash.",
-      package: package(),
-      aliases: aliases(),
       deps: deps(),
+      description: "Stream into md5, ripemd160, sha, sha224, sha256, sha384, sha512 hash.",
+      elixir: "~> 1.5",
+      package: package(),
+      start_permanent: Mix.env() == :prod,
+      version: "0.1.0",
+
       # Docs
-      name: "StreamHash",
-      source_url: "https://github.com/ne-sachirou/stream_hash",
-      homepage_url: "https://github.com/ne-sachirou/stream_hash",
       docs: [
         main: "StreamHash",
         extras: ["README.md"]
-      ]
+      ],
+      homepage_url: @github,
+      name: "StreamHash",
+      source_url: @github
     ]
   end
 
-  def application do
-    [extra_applications: []]
-  end
+  def application, do: [extra_applications: []]
 
   defp deps do
     [
@@ -34,21 +34,13 @@ defmodule StreamHash.Mixfile do
     ]
   end
 
-  defp aliases do
-    [
-      lint: ["cotton.lint"]
-    ]
-  end
-
   defp package do
     [
-      licenses: ["GPL-3.0"],
-      name: :stream_hash,
+      files: ["LICENSE", "README.md", "mix.exs", "lib"],
+      licenses: ["GPL-3.0-or-later"],
+      links: %{GitHub: @github},
       maintainers: ["ne_Sachirou <utakata.c4se@gmail.com>"],
-      links: %{
-        GitHub: "https://github.com/ne-sachirou/stream_hash"
-      },
-      files: ["LICENSE", "README.md", "mix.exs", "lib"]
+      name: :stream_hash
     ]
   end
 end

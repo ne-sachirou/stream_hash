@@ -1,6 +1,6 @@
 StreamHash
 ==
-Stream into md4, md5, ripemd160, sha, sha224, sha256, sha384, sha512 hash.
+Stream into md5, ripemd160, sha, sha224, sha256, sha384, sha512 hash.
 
 [![Hex.pm](https://img.shields.io/hexpm/v/stream_hash.svg)](https://hex.pm/packages/stream_hash)
 [![Build Status](https://travis-ci.org/ne-sachirou/stream_hash.svg?branch=master)](https://travis-ci.org/ne-sachirou/stream_hash)
