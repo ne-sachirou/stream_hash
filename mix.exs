@@ -9,10 +9,14 @@ defmodule StreamHash.Mixfile do
       build_embedded: Mix.env() == :prod,
       deps: deps(),
       description: "Stream into md5, ripemd160, sha, sha224, sha256, sha384, sha512 hash.",
-      elixir: "~> 1.5",
+      dialyzer: [
+        flags: [:no_undefined_callbacks],
+        remove_defaults: [:unknown]
+      ],
+      elixir: "~> 1.6",
       package: package(),
       start_permanent: Mix.env() == :prod,
-      version: "0.1.1",
+      version: "0.2.1",
 
       # Docs
       docs: [

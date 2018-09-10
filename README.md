@@ -25,6 +25,6 @@ Add `stream_hash` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:stream_hash, "~> 0.1"}]
+  [{:stream_hash, "~> 0.2"}]
 end
 ```
