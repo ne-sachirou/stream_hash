@@ -15,7 +15,15 @@ defmodule StreamHash.Mixfile do
       ],
       elixir: "~> 1.6",
       package: package(),
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.travis": :test,
+        "coveralls.html": :test
+      ],
       start_permanent: Mix.env() == :prod,
+      test_coverage: [tool: ExCoveralls],
       version: "0.2.1",
 
       # Docs
