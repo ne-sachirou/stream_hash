@@ -4,6 +4,7 @@ Stream into md5, ripemd160, sha, sha224, sha256, sha384, sha512 hash.
 
 [![Hex.pm](https://img.shields.io/hexpm/v/stream_hash.svg)](https://hex.pm/packages/stream_hash)
 [![Build Status](https://travis-ci.org/ne-sachirou/stream_hash.svg?branch=master)](https://travis-ci.org/ne-sachirou/stream_hash)
+[![Coverage Status](https://coveralls.io/repos/github/ne-sachirou/stream_hash/badge.svg)](https://coveralls.io/github/ne-sachirou/stream_hash)
 
 ```elixir
 "test/fixture/xyzxyz.txt"

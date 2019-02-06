@@ -13,7 +13,7 @@ defmodule StreamHash.Mixfile do
         flags: [:no_undefined_callbacks],
         remove_defaults: [:unknown]
       ],
-      elixir: "~> 1.6",
+      elixir: "~> 1.7",
       package: package(),
       preferred_cli_env: [
         coveralls: :test,
