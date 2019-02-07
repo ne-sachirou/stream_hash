@@ -24,7 +24,7 @@ defmodule StreamHash.Mixfile do
       ],
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: ExCoveralls],
-      version: "0.2.1",
+      version: "0.3.0",
 
       # Docs
       docs: [
