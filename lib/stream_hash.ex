@@ -1,9 +1,21 @@
 defmodule StreamHash do
   @moduledoc """
-  Stream into md5, ripemd160, sha, sha224, sha256, sha384, sha512 hash.
+  Stream into SHA1, SHA2, SHA3, BLAKE2, RIPEMD-160 hash. (Hash algorithms which Erlang is supporting.)
   """
 
-  @type hash_algorithms :: :md5 | :ripemd160 | :sha | :sha224 | :sha256 | :sha384 | :sha512
+  @type hash_algorithms ::
+          :blake2b
+          | :blake2s
+          | :ripemd160
+          | :sha
+          | :sha224
+          | :sha256
+          | :sha384
+          | :sha3_224
+          | :sha3_256
+          | :sha3_384
+          | :sha3_512
+          | :sha512
 
   @doc """
   Stream into hash.
