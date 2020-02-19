@@ -8,7 +8,8 @@ defmodule StreamHash.Mixfile do
       app: :stream_hash,
       build_embedded: Mix.env() == :prod,
       deps: deps(),
-      description: "Stream into md5, ripemd160, sha, sha224, sha256, sha384, sha512 hash.",
+      description:
+        "Stream into SHA1, SHA2, SHA3, BLAKE2, RIPEMD-160 hash. (Hash algorithms which Erlang is supporting.)",
       dialyzer: [
         flags: [:no_undefined_callbacks],
         remove_defaults: [:unknown]
@@ -18,8 +19,7 @@ defmodule StreamHash.Mixfile do
       preferred_cli_env: [
         coveralls: :test,
         "coveralls.detail": :test,
-        "coveralls.post": :test,
-        "coveralls.travis": :test,
+        "coveralls.github": :test,
         "coveralls.html": :test
       ],
       start_permanent: Mix.env() == :prod,

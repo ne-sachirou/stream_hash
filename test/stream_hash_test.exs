@@ -4,7 +4,11 @@ defmodule StreamHashTest do
   doctest StreamHash
 
   describe "hash/2" do
-    for algorithm <- [:md5, :ripemd160, :sha, :sha224, :sha256, :sha384, :sha512] do
+    for algorithm <-
+          try(
+            do: :crypto.supports(:hashs),
+            rescue: (_ in UndefinedFunctionError -> :crypto.supports()[:hashs])
+          ) do
       @tag algorithm: algorithm
       test "#{algorithm}", %{algorithm: algorithm} do
         hash = :crypto.hash(algorithm, "xyzxyz\n")

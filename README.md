@@ -1,10 +1,10 @@
 StreamHash
 ==
-Stream into md5, ripemd160, sha, sha224, sha256, sha384, sha512 hash.
+Stream into SHA1, SHA2, SHA3, BLAKE2, RIPEMD-160 hash. (Hash algorithms which Erlang is supporting.)
 
-[![Hex.pm](https://img.shields.io/hexpm/v/stream_hash.svg)](https://hex.pm/packages/stream_hash)
-[![Build Status](https://travis-ci.org/ne-sachirou/stream_hash.svg?branch=master)](https://travis-ci.org/ne-sachirou/stream_hash)
+[![Actions Status](https://github.com/AUTHER_NAME/PROJECT_NAME/workflows/test/badge.svg)](https://github.com/ne-sachirou/stream_hash/actions)
 [![Coverage Status](https://coveralls.io/repos/github/ne-sachirou/stream_hash/badge.svg)](https://coveralls.io/github/ne-sachirou/stream_hash)
+[![Hex.pm](https://img.shields.io/hexpm/v/stream_hash.svg)](https://hex.pm/packages/stream_hash)
 
 ```elixir
 "test/fixture/xyzxyz.txt"
