@@ -1,10 +1,10 @@
-StreamHash
-==
-Stream into SHA1, SHA2, SHA3, BLAKE2, RIPEMD-160 hash. (Hash algorithms which Erlang is supporting.)
-
-[![Actions Status](https://github.com/AUTHER_NAME/PROJECT_NAME/workflows/test/badge.svg)](https://github.com/ne-sachirou/stream_hash/actions)
+[![Actions Status](https://github.com/ne-sachirou/stream_hash/workflows/test/badge.svg)](https://github.com/ne-sachirou/stream_hash/actions)
 [![Coverage Status](https://coveralls.io/repos/github/ne-sachirou/stream_hash/badge.svg)](https://coveralls.io/github/ne-sachirou/stream_hash)
 [![Hex.pm](https://img.shields.io/hexpm/v/stream_hash.svg)](https://hex.pm/packages/stream_hash)
+
+# StreamHash
+
+Stream into SHA1, SHA2, SHA3, BLAKE2, RIPEMD-160 hash. (Hash algorithms which Erlang is supporting.)
 
 ```elixir
 "test/fixture/xyzxyz.txt"
@@ -20,12 +20,12 @@ Stream into SHA1, SHA2, SHA3, BLAKE2, RIPEMD-160 hash. (Hash algorithms which Er
 
 [Docs](https://hexdocs.pm/stream_hash/).
 
-Installation
---
+## Installation
+
 Add `stream_hash` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:stream_hash, "~> 0.2"}]
+  [{:stream_hash, "~> 0.3"}]
 end
 ```
